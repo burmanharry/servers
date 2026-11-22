@@ -1,0 +1,54 @@
+id: rootmention
+name: RootMention
+category: productivity
+
+description: Public SEO audits, break-even calculations and RootMention service information.
+
+long_description: |
+  RootMention is a hosted remote MCP server with three public tools and no API key.
+  run_seo_audit audits a public homepage and up to two discovered product or collection
+  pages, with user authorization. Audits are bounded HTML checks, not ranking, backlink,
+  traffic or AI visibility measurements, and no report or sales lead is saved.
+  calculate_seo_break_even estimates the incremental orders and visits needed to cover
+  monthly SEO spend. It is a scenario calculation, not a forecast.
+  get_services returns RootMention service scope, pricing and public links.
+  The product is an SEO subscription at $299 a month. Documentation is at
+  https://rootmention.gitbook.io/rootmention-docs/. The site is https://rootmention.com.
+
+maintainer:
+  name: RootMention
+  github: burmanharry
+  website: https://rootmention.com
+
+authentication:
+  type: none
+  provider: none
+  instructions: |
+    No authentication is required. Connect a Model Context Protocol client to
+    https://rootmention.com/mcp using Streamable HTTP.
+
+endpoints:
+  production: https://rootmention.com/mcp
+
+capabilities:
+  - id: run_seo_audit
+    name: Run SEO audit
+    description: Audit a public homepage and up to two discovered product or collection pages, with user authorization.
+  - id: calculate_seo_break_even
+    name: Calculate SEO break-even
+    description: Estimate incremental orders and visits needed to cover monthly SEO spend. A scenario calculation, not a forecast.
+  - id: get_services
+    name: Get services
+    description: Read RootMention service scope, pricing and public links.
+
+tags:
+  - seo
+  - mcp
+  - remote
+
+verification:
+  status: pending
+  tested_date: "2026-11-22T01:00:31Z"
+  security_audit: false
+
+featured: false
