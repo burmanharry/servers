@@ -1,0 +1,61 @@
+id: spillmark
+name: Spillmark
+category: data-analysis
+description: Read-only Amazon profit, fee, ACoS, and geo-holdout MCP tools for Claude, ChatGPT, and agents.
+long_description: |
+  Spillmark publishes a public, read-only MCP server at https://spillmark.com/mcp.
+  Public Amazon profit, referral and FBA fee, ACoS, TACoS, and geo-holdout
+  calculators require no key. An optional brand key can read a brand's own
+  profit and incrementality record. Docs: https://spillmark.com/agents and
+  https://spillmark-mcp-docs.netlify.app/. Listing repo:
+  https://github.com/burmanharry/spillmark-mcp. Registry name: com.spillmark/spillmark.
+maintainer:
+  name: Harry Burman
+  github: burmanharry
+  website: https://spillmark.com
+authentication:
+  type: none
+  instructions: |
+    Public tools need no key. Add the public URL to your MCP client:
+    https://spillmark.com/mcp
+    An optional brand key from Spillmark Settings, Agent access, can be sent
+    as Authorization: Bearer sm_... to read that brand's own profit and
+    incrementality record. Public calculators work without a key.
+endpoints:
+  production: https://spillmark.com/mcp
+capabilities:
+  - id: list_calculators
+    name: List Spillmark's free calculators
+    description: List free Amazon and Meta ads calculators, with each one's inputs and example values
+  - id: run_calculator
+    name: Run a Spillmark calculator
+    description: Run one calculator from that list by slug and return the headline result
+  - id: how_lift_is_calculated
+    name: How Spillmark calculates lift
+    description: Brief of Spillmark's geo holdout method, with links to the full method
+  - id: run_brand_audit
+    name: Run a free Amazon brand, storefront, and listing audit
+    description: Scan a public storefront and listing copy and return a score with the top fixes
+  - id: audit_listing_copy
+    name: Audit Amazon listing and supplement compliance copy
+    description: Check listing title and bullets for supplement compliance and listing hygiene flags
+  - id: summarize_review_themes
+    name: Summarize Amazon review feedback themes
+    description: Group reviews into praise and complaint themes and suggest product and listing improvements
+  - id: draft_customer_reply
+    name: Draft a compliance-checked customer service reply
+    description: Classify an inquiry and draft a brand-safe reply with supplement compliance checks
+  - id: repurpose_video_content
+    name: Turn a YouTube video into email, scripts, and listing bullets
+    description: Turn a video title and transcript into an email, short-clip scripts, and listing bullets
+tags:
+  - amazon
+  - marketing
+  - calculators
+  - remote
+  - ecommerce
+verification:
+  status: pending
+  tested_date: "2026-11-21T00:00:00Z"
+  security_audit: false
+featured: false
